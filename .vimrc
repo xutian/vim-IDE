@@ -93,3 +93,5 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+$\| \+\ze\t\|\t/
 if filereadable(expand("~/.vim/custom.vim"))
     source ~/.vim/custom.vim
 endif
+
+autocmd BufWritePost *.py call Flake8()
